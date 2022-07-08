@@ -8,7 +8,7 @@ buildscript {
     maven("https://plugins.gradle.org/m2/")
   }
   dependencies {
-    classpath("com.android.tools.build:gradle:${Versions.gradle}")
+    classpath("com.android.tools.build:gradle:7.1.3")
     classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
     classpath("org.jetbrains.dokka:dokka-gradle-plugin:${Versions.dokka}")
     classpath("org.jlleitschuh.gradle:ktlint-gradle:${Versions.gradleKlint}")
