@@ -32,10 +32,6 @@ extra.set(
       executionData.setFrom(getExecutionDataTree(buildDirectory.absolutePath, task))
 
       reports {
-        xml.isEnabled = true
-        csv.isEnabled = false
-        html.isEnabled = true
-        html.destination = File("${buildDirectory.absolutePath}/reports/coverage")
       }
     }
   })

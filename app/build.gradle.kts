@@ -53,7 +53,6 @@ android {
   flavorDimensions("version", "target")
   productFlavors {
     create("staging") {
-      dimension("version")
       applicationIdSuffix = ".staging"
       versionNameSuffix = "-Staging"
       manifestPlaceholders["scheme"] = "celerik.staging"
@@ -61,16 +60,14 @@ android {
       buildConfigField("String", "BASE_URL", "\"https://staging.base.url.com\"")
     }
     create("production") {
-      dimension("version")
       manifestPlaceholders["scheme"] = "celerik.production"
       buildConfigField("String", "SCHEME", "\"${manifestPlaceholders["scheme"]}\"")
       buildConfigField("String", "BASE_URL", "\"https://production.base.url.com\"")
     }
     create("internal") {
-      dimension("target")
     }
     create("external") {
-      dimension("target")
+
     }
 
     variantFilter {
