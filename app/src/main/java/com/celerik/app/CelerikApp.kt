@@ -6,7 +6,6 @@ import android.os.StrictMode.VmPolicy
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.app.core.CoreApp
 import com.celerik.app.di.components.AppComponent
-import com.celerik.app.di.components.DaggerAppComponent
 import com.celerik.app.viewModels.CelerikAppViewModel
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -32,10 +31,6 @@ open class CelerikApp : CoreApp(), HasAndroidInjector {
   }
 
   private fun initializeComponent() {
-    appComponent = DaggerAppComponent.builder()
-      .application(this)
-      .build()
-
     appComponent.inject(this)
   }
 
